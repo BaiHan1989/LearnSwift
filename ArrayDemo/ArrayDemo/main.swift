@@ -25,6 +25,10 @@ import Foundation
 //    return n % 2 == 0
 //}
 
+// 简写
+//let newArray = array.filter { $0 % 2 == 0 }
+//print(newArray)
+
 /**
  map 作用：将数组中元素进行映射处理，返回处理过后的新数组
  传入函数/闭包表达式
@@ -37,6 +41,9 @@ import Foundation
 //}
 //print(newArray)
 
+//let newArray = array.map { $0 * 2 }
+//print(newArray)
+
 /**
  reduce 作用：汇总
  传入初始值和一个函数/闭包表达式，
@@ -47,6 +54,9 @@ import Foundation
 //let result = array.reduce(0) { (previousResult, n) in
 //    return previousResult + n
 //}
+//print(result)
+
+//let result = array.reduce(0) { $0 + $1 }
 //print(result)
 
 
@@ -69,20 +79,26 @@ import Foundation
 //}
 //print(newArray2)
 
+//let newArray = array.flatMap { Array(repeating: $0, count: $0) }
+//print(newArray)
+
 
 /**
  compactMap对比map
  compactMap在进行元素映射的时候，会将nil过滤掉，并且会将可选项进行解包
  */
 let array = ["1", "flutter", "3", "Vue"]
+//
+//let newArray = array.map { item in
+//    return Int(item)
+//}
+//print(newArray)
+//
+//let newArray2 = array.compactMap { item  in
+//    return Int(item)
+//}
+//
+//print(newArray2)
 
-let newArray = array.map { item in
-    return Int(item)
-}
+let newArray = array.compactMap { Int($0) }
 print(newArray)
-
-let newArray2 = array.compactMap { item  in
-    return Int(item)
-}
-
-print(newArray2)
