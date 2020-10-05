@@ -28,6 +28,13 @@ var num2 = 20
 num2 = 40
 print(num2)
 
+// 声明多个变量/常量 使用逗号分隔
+//var x = 0.0, y = 0.0, z = 0.0
+
+let welcomeString: String
+welcomeString = "Hello"
+
+
 // 常量/变量在初始化之前都不能使用 没有默认值
 let a:Int
 var b:Int
@@ -70,3 +77,18 @@ let result1 = x + Int(y)
 let result2 = Double(x) + y
 print(result1)
 print(result2)
+
+//if 1 {
+//
+//}
+
+
+//let i = 1
+//if i == 1 {
+//    print(i)
+//}
+
+// 给类型起别名
+//typealias AudioSample = UInt8
+//let sample: AudioSample = 32
+//print(sample)
